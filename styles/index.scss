@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@import "helpers/reset";
 @import 'main';
 @import 'common/button';
-
+@import 'helpers/students';
+@import 'helpers/subscribe';
+@import 'helpers/about';
+@import 'helpers/freelance';

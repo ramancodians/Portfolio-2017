@@ -1,0 +1,30 @@
+.about{
+  main{
+    display: flex;
+    min-height: 400px;
+    .left,
+    .right{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left{
+      img{
+        border-radius: 50%;
+        max-width: 250px;
+      }
+    }
+
+    .right{
+      flex-direction: column;
+      text-align: left;
+      align-items: flex-start;
+      h2{
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

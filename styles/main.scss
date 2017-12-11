@@ -1,3 +1,195 @@
+$baseColor : #31C3C9;
+$font1: 'Titillium Web', sans-serif;
+$font2: 'Lato', sans-serif;
+
 body {
-  background: #ece7e7;
+  background: #FFF;
+  font-family: $font1;
+}
+
+p{
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+
+.modal{
+  //background: $baseColor;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+
+  &.hide{
+    display: none !important;
+  }
+
+  &.user_type.show{
+    background: #FFF;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex !important;
+  }
+
+  .close_btn_wrap{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: red;
+  }
+
+  .modal_wrap{
+    text-align: left;
+    margin-left: 50px;
+    color: #222;
+    h2{ font-size: 30px; }
+    ul{
+      li{
+        list-style: none;
+        display: inline-block;
+        padding: 20px;
+        font-size: 40px;
+        img{
+          max-width: 50px;
+          margin-right: 20px;
+        }
+        a{
+          line-height: 1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+header{
+  padding: 10px 0px;
+  .container{
+    display: flex;
+  }
+
+  .site_name{
+    font-size: 30px;
+    font-family: $font2;
+    font-weight: bold;
+
+    & > span{
+      border: 1px solid red;
+      width: 20px;
+      background: yellow;
+      overflow: hidden;
+    }
+  }
+
+   ul.nav{
+    flex:1;
+    text-align: right;
+
+    li{
+      display: inline-block;
+      list-style: none;
+      padding: 10px;
+    }
+  }
+}
+
+.home_welcome{
+  display: flex;
+  height: calc(100vh - 50px);
+  text-align: center;
+
+  & > div{
+    flex: 1;
+
+   &.left{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+
+      h3,h1,h4{
+        margin-top: 15px;
+      }
+
+      h3{
+        font-size: 50px;
+      }
+      h4{
+        font-size: 50px;
+      }
+
+      h1{
+        font-weight: bold;
+        font-size: 70px;
+      }
+
+      button{
+        margin-top: 40px;
+        border: none;
+        padding: 20px;
+        border-bottom: 2px solid $baseColor;
+        background: transparent;
+      }
+    }
+
+    &.right{
+      align-self: flex-end;
+    }
+  }
+}
+
+
+button.menu_btn {
+  padding:0;
+  background:none;
+  border:none;
+  cursor:pointer;
+  margin: 1em;
+  width: 30px;
+
+  &:after,
+  &:before,
+  div {
+    background-color: #000;
+    border-radius: 1px;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 10px 0;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover,&.close {
+    &:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+
+    div {
+      transform: scale(0);
+    }
+
+    &:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+  }
+}
+
+
+.footer{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: rgba(#000, 0.5);
 }
