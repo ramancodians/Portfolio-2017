@@ -28,4 +28,30 @@
       }
     }
   }
+
+  .tech_i_work_in{
+    display: flex;
+    flex-direction: column;
+
+    & > h2{
+      font-size: 40px;
+    }
+
+    ul{
+      display: flex;
+      margin-top: 30px;
+      li{
+        list-style: none;
+        text-align: center;
+        margin-right: 20px;
+        background: #FFF;
+        padding: 16px;
+        box-shadow: 0px 2px 10px 0px rgba(#000, 0.1);
+
+        img{
+          max-width: 100px;
+        }
+      }
+    }
+  }
 }

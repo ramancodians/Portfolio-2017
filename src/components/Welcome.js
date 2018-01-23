@@ -52,6 +52,7 @@ class Welcome extends React.Component {
     showUserTypeModal: false,
   }
 
+
   toggleUserTypeModal = (show) => {
     this.setState({
       showUserTypeModal: show
@@ -60,7 +61,6 @@ class Welcome extends React.Component {
 
   render() {
     const { showUserTypeModal } = this.state
-    console.log(this.state);
     return (
       <div className="home_welcome">
         <UserTypeModal

@@ -1,0 +1,76 @@
+// Global Styles
+$width : 300px;
+$baseDuration : 0.3s;
+
+.sidebar_overlay{
+  background-color: rgba(#FFF,0);
+  pointer-events: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition-duration: $baseDuration;
+
+  .sidebar{
+    position: fixed;
+    top: 0px;
+    width: $width;
+    height: 100%;
+    background: $baseColor;
+    right: -$width;
+    transition-duration: $baseDuration + 0.2s;
+  }
+
+  .messages{
+    display: flex;
+    background: rgba(#fff, 0.8);
+    width: calc( 100% - #{$width});
+    height: 100%;
+    padding-left: 50px;
+    opacity: 0;
+    transition-duration: $baseDuration + 0.3;
+    flex-direction: column;
+    justify-content: center;
+
+    h4{
+      font-size: 20px;
+      color: #999;
+    }
+
+    h1{
+      font-size: 50px;
+      margin: 30px 0px;
+    }
+
+    h1,h4,h3{
+      transition-duration: $baseDuration;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+
+  // When Hiddern
+  &.show{
+    pointer-events: inherit;
+    display: block;
+    background-color: rgba(#FFF, 0.9);
+
+    .sidebar{
+      right: 0px;
+    }
+
+    .messages{
+      opacity: 1;
+
+      h1,h4,h3{
+        transition-delay: $baseDuration;
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  }
+
+
+  // When Shown
+}

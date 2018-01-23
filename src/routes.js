@@ -13,15 +13,20 @@ import Sample from './components/Sample';
 import 'styles/index.scss';
 
 const Routes = () => (
-  <Router>
+  <Router
+    onEnter={(e) => {console.log("asdasdasdasdasda")}}
+    onUpdate={(e) => {console.log("asdasdasdasdasda")}}
+  >
     <div>
       <Navigation />
-      <Route exact path="/" component={App}/>
-      <Route path="/about-me" component={About}/>
-      <Route path="/sample" component={Sample}/>
-      <Route path="/freelance" component={Freelance}/>
-      <Route path="/students" component={Students}/>
-      <Footer />
+      <div className="pages">
+        <Route exact path="/" component={App}/>
+        <Route path="/about-me" component={About}/>
+        <Route path="/sample" component={Sample}/>
+        <Route path="/freelance" component={Freelance}/>
+        <Route path="/students" component={Students}/>
+        <Footer />
+      </div>
     </div>
   </Router>
 );

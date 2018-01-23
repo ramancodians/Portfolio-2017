@@ -19,7 +19,7 @@ p{
 }
 .container{
   max-width: 1400px;
-  margin: 0px auto;
+  margin: 0px 40px;
 }
 
 
@@ -85,11 +85,25 @@ header{
     font-family: $font2;
     font-weight: bold;
 
-    & > span{
-      border: 1px solid red;
+    &:hover{
+      cursor: pointer;
+      & > div{
+        color: $baseColor;
+        &:nth-child(1){
+          width: 100px;
+        }
+        &:nth-child(2){
+          transition-delay: 0.1s;
+          width: 160px;
+        }
+      }
+    }
+
+    & > div{
+      display: inline-block;
       width: 20px;
-      background: yellow;
       overflow: hidden;
+      transition-duration: 0.3s;
     }
   }
 
@@ -118,6 +132,7 @@ header{
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
+      text-align: left;
 
       h3,h1,h4{
         margin-top: 15px;
@@ -133,6 +148,8 @@ header{
       h1{
         font-weight: bold;
         font-size: 70px;
+        transition-duration: 1s;
+        transform: rotateY(0px);
       }
 
       button{
