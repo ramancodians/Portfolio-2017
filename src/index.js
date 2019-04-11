@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import "./utils/helpers"
 import {AppContainer} from 'react-hot-loader'
 import Routes from './routes'
 

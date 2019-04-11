@@ -1,10 +1,16 @@
 @charset "UTF-8";
 
 @import "helpers/reset";
+@import 'fontello/css/fontello.css';
 @import 'main';
-@import 'common/button';
 @import 'helpers/students';
 @import 'helpers/sidebar';
 @import 'helpers/subscribe';
 @import 'helpers/about';
 @import 'helpers/freelance';
+@import 'helpers/animatedText';
+@import 'helpers/htmlTag';
+@import 'helpers/scrollLine';
+@import 'helpers/multiline';
+@import 'common/button';
+

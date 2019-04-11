@@ -1,0 +1,41 @@
+.multiline {
+  position: relative;
+  & .overlay-wrap {
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    & .overlay {
+      width: 0%;
+      position: relative;
+      z-index: 1;
+      background: $baseColor;
+      margin-top: 8px;
+      animation: swipe-effect-multi $time ease-in-out forwards;
+    }
+  }
+
+  > span {
+    opacity: 0;
+    animation: show-in $time forwards;
+  }
+}
+
+@keyframes swipe-effect-multi {
+  0% {
+   width: 0%;
+  }
+
+  60% {
+    width: 100%;
+    right: 0px;
+    left: 0%;
+  }
+
+  100% {
+    width: 0%;
+    right: 0px;
+    left: 100%;
+  }
+}

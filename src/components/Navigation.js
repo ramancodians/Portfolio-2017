@@ -12,7 +12,6 @@ class Navigation extends React.Component {
   }
 
   componentDidMount() {
-    console.log(BrowserRouter, History);
     window.onbeforeunload = function() {
        console.log("asdadasdasd asda sd ");
     }

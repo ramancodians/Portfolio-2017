@@ -18,12 +18,14 @@
   "license": "MIT",
   "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
+    "react-in-viewport": "0.0.37",
+    "react-pose": "^4.0.8",
     "react-transition-group": "^2.2.1",
     "sass-loader": "^6.0.6"
   },

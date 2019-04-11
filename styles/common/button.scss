@@ -1,6 +1,36 @@
-.redBg {
-  background-color: red;
-  border-radius: 51px;
-  color: white;
-  padding: 5px;
+.animated-button {
+	display:inline-block;
+	
+
+	&:hover {
+		& > button > .overlay {
+			animation: swipe-effect $time ease-in-out forwards;
+		}
+	}
+	> button {
+		border: 0px;
+		background: transparent;
+		position: relative;
+		outline: none;
+		padding: 10px 0px;
+		cursor: pointer;
+		transition-delay: 0s;
+		transition-duration: 0.4s;
+		font-family: $develop;
+		
+		&:hover {
+			transition-delay: 0.3s;
+			color: $baseColor !important;
+		}
+
+		.overlay {
+			position: absolute;
+			background: $baseColor;
+			top: 0px;
+			height: 100%;
+			z-index: 1;
+			background-blend-mode: color-dodge;
+		}
+		
+	}
 }
